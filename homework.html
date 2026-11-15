@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Homework: Family Vocabulary (A1)</title>
+    <style>
+        :root {
+            --bg-main: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --primary-dark: #1d4ed8;
+            --accent-purple: #7c3aed;
+            --accent-purple-light: #f5f3ff;
+            --accent-emerald: #059669;
+            --accent-emerald-light: #ecfdf5;
+            --accent-amber: #d97706;
+            --accent-amber-light: #fffbeb;
+            --border-color: #e2e8f0;
+            --success: #16a34a;
+            --success-bg: #dcfce7;
+            --error: #dc2626;
+            --error-bg: #fee2e2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25);
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            color: #dbeafe;
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Section Dividers */
+        .part-banner {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .part-banner h2 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .part-icon {
+            font-size: 1.75rem;
+        }
+
+        /* Exercise Cards */
+        .exercise-box {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.75rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+
+        .ex-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .ex-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .ex-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+
+        .ex-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .tag-blue { background: var(--primary-light); color: var(--primary); }
+        .tag-purple { background: var(--accent-purple-light); color: var(--accent-purple); }
+        .tag-emerald { background: var(--accent-emerald-light); color: var(--accent-emerald); }
+        .tag-amber { background: var(--accent-amber-light); color: var(--accent-amber); }
+
+        /* Word Bank */
+        .word-bank {
+            background: #f8fafc;
+            border: 1px dashed #94a3b8;
+            border-radius: 10px;
+            padding: 0.85rem 1.1rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            align-items: center;
+        }
+
+        .word-bank-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-right: 0.4rem;
+        }
+
+        .word-pill {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+        }
+
+        /* Question Rows */
+        .item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            background: #f8fafc;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #f1f5f9;
+            font-size: 1.02rem;
+        }
+
+        .emoji-badge {
+            font-size: 1.55rem;
+            line-height: 1;
+            min-width: 34px;
+            text-align: center;
+        }
+
+        /* Inputs & Selects */
+        input[type="text"], select {
+            border: 1.5px solid #cbd5e1;
+            border-radius: 7px;
+            padding: 0.4rem 0.65rem;
+            font-size: 0.98rem;
+            color: var(--text-dark);
+            background: white;
+            transition: all 0.2s;
+        }
+
+        input[type="text"] {
+            width: 165px;
+        }
+
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .correct {
+            border-color: var(--success) !important;
+            background-color: var(--success-bg) !important;
+            color: #14532d !important;
+            font-weight: 600;
+        }
+
+        .incorrect {
+            border-color: var(--error) !important;
+            background-color: var(--error-bg) !important;
+            color: #7f1d1d !important;
+        }
+
+        .revealed-fix {
+            border-color: var(--accent-amber) !important;
+            background-color: var(--accent-amber-light) !important;
+            color: #92400e !important;
+            font-weight: 700;
+        }
+
+        .status-icon {
+            font-weight: 800;
+            font-size: 1.15rem;
+            min-width: 22px;
+            text-align: center;
+        }
+
+        /* Odd One Out Radio Grid */
+        .odd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .odd-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .odd-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.65rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .odd-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .odd-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.65rem;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 0.96rem;
+            transition: background 0.15s;
+        }
+
+        .odd-option:hover {
+            background: #f1f5f9;
+        }
+
+        /* 10 Riddle Cards (Write-on-Card, Non-Flip) */
+        .riddle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .riddle-card {
+            border-radius: 14px;
+            padding: 1.35rem;
+            border: 1.5px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s;
+        }
+
+        .riddle-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .riddle-card:nth-child(4n+1) { background: linear-gradient(180deg, #eff6ff 0%, #ffffff 45%); border-color: #bfdbfe; }
+        .riddle-card:nth-child(4n+2) { background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 45%); border-color: #ddd6fe; }
+        .riddle-card:nth-child(4n+3) { background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 45%); border-color: #a7f3d0; }
+        .riddle-card:nth-child(4n+4) { background: linear-gradient(180deg, #fffbeb 0%, #ffffff 45%); border-color: #fde68a; }
+
+        .riddle-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .riddle-num {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.85);
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+        }
+
+        .riddle-emoji {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+
+        .riddle-text {
+            font-size: 1.02rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .riddle-input-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .riddle-input-wrap input {
+            width: 100%;
+            font-weight: 600;
+        }
+
+        /* Action Buttons */
+        .section-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .section-score {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-left: auto;
+        }
+
+        .global-controls {
+            background: white;
+            padding: 1.75rem;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            margin-top: 2.5rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .global-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 0.65rem 1.35rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: var(--primary-dark); }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: var(--text-dark);
+        }
+        .btn-secondary:hover { background: #cbd5e1; }
+
+        .btn-reveal {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+            display: none;
+        }
+        .btn-reveal:hover { background: #fde68a; }
+
+        .btn-large {
+            padding: 0.9rem 2rem;
+            font-size: 1.05rem;
+        }
+
+        #final-score {
+            display: none;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            background: var(--primary-light);
+            color: #1e3a8a;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border: 1px solid #bfdbfe;
+        }
+
+        @media (max-width: 600px) {
+            input[type="text"] { width: 140px; }
+            .section-score { margin-left: 0; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="level-badge">CEFR Level A1 • Adult Homework</span>
+        <h1>Family Members Vocabulary</h1>
+        <p>Complete the shuffled family vocabulary tasks and solve the 10 family riddle cards.</p>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- PART 1: FAMILY VOCABULARY (SHUFFLED EXERCISES)            -->
+    <!-- ========================================================= -->
+    <div class="part-banner">
+        <span class="part-icon">👨🏽‍👩🏽‍👧🏽‍👦🏽</span>
+        <h2>Part 1: Family Members Vocabulary</h2>
+    </div>
+
+    <!-- VOCAB EXERCISE 1: MATCHING DEFINITIONS -->
+    <section class="exercise-box" id="vocab-ex1">
+        <div class="ex-header">
+            <div>
+                <div class="ex-title">Exercise 1: Match the Definition</div>
+                <div class="ex-subtitle">Choose the correct family member from the dropdown list for each description.</div>
+            </div>
+            <span class="ex-tag tag-blue">Matching • 6 Items</span>
+        </div>
+
+        <ul class="item-list">
+            <li class="item-row">
+                <span class="emoji-badge">👩🏽</span>
+                <span>The daughter of your brother or sister is your</span>
+                <select data-answer="niece">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👨🏽‍💼</span>
+                <span>Your father's new wife (not your biological mother) is your</span>
+                <select data-answer="step-mother">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👵🏽</span>
+                <span>The mother of your husband or wife is your</span>
+                <select data-answer="mother-in-law">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">🧑🏽</span>
+                <span>The child of your aunt or uncle is your</span>
+                <select data-answer="cousin">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👩🏽‍🏫</span>
+                <span>The sister of your mother or father is your</span>
+                <select data-answer="aunt">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👩🏽‍🎓</span>
+                <span>The daughter of your son or daughter is your</span>
+                <select data-answer="granddaughter">
+                    <option value="">-- select --</option>
+                    <option value="cousin">cousin</option>
+                    <option value="niece">niece</option>
+                    <option value="aunt">aunt</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="mother-in-law">mother-in-law</option>
+                    <option value="granddaughter">granddaughter</option>
+                </select>.
+                <span class="status-icon"></span>
+            </li>
+        </ul>
+        <div class="section-actions">
+            <button class="btn-primary" onclick="checkSection('vocab-ex1')">Check Exercise 1</button>
+            <button class="btn-reveal" id="reveal-vocab-ex1" onclick="revealSection('vocab-ex1')">Show Wrong Answers</button>
+            <button class="btn-secondary" onclick="resetSection('vocab-ex1')">Reset</button>
+            <span class="section-score" id="score-vocab-ex1"></span>
+        </div>
+    </section>
+
+    <!-- VOCAB EXERCISE 2: FILL IN THE BLANKS (SHUFFLED MIX) -->
+    <section class="exercise-box" id="vocab-ex2">
+        <div class="ex-header">
+            <div>
+                <div class="ex-title">Exercise 2: Complete the Sentences</div>
+                <div class="ex-subtitle">Write one word from the word bank in each blank.</div>
+            </div>
+            <span class="ex-tag tag-purple">Gap-Fill • 6 Items</span>
+        </div>
+
+        <div class="word-bank">
+            <span class="word-bank-label">Word Bank:</span>
+            <span class="word-pill">nephew</span>
+            <span class="word-pill">husband</span>
+            <span class="word-pill">siblings</span>
+            <span class="word-pill">step-father</span>
+            <span class="word-pill">twins</span>
+            <span class="word-pill">brother-in-law</span>
+        </div>
+
+        <ul class="item-list">
+            <li class="item-row">
+                <span class="emoji-badge">🤵🏽‍♂️</span>
+                <span>Anna and David got married last year. David is Anna's <input type="text" data-answer="husband">.</span>
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👨🏽‍🔧</span>
+                <span>My mother married Mark two years ago. Mark is my <input type="text" data-answer="step-father|stepfather">.</span>
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👯🏽‍♂️</span>
+                <span>Alex and Leo were born on the same day to the same mother. They are <input type="text" data-answer="twins">.</span>
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👨🏽</span>
+                <span>My sister's son is six years old. He is my <input type="text" data-answer="nephew">.</span>
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👨🏽‍💻</span>
+                <span>My sister is married to Tom. Tom is my <input type="text" data-answer="brother-in-law">.</span>
+                <span class="status-icon"></span>
+            </li>
+            <li class="item-row">
+                <span class="emoji-badge">👩🏽‍🤝‍👨🏽</span>
+                <span>I have two brothers and one sister. I have three <input type="text" data-answer="siblings">.</span>
+                <span class="status-icon"></span>
+            </li>
+        </ul>
+        <div class="section-actions">
+            <button class="btn-primary" onclick="checkSection('vocab-ex2')">Check Exercise 2</button>
+            <button class="btn-reveal" id="reveal-vocab-ex2" onclick="revealSection('vocab-ex2')">Show Wrong Answers</button>
+            <button class="btn-secondary" onclick="resetSection('vocab-ex2')">Reset</button>
+            <span class="section-score" id="score-vocab-ex2"></span>
+        </div>
+    </section>
+
+    <!-- VOCAB EXERCISE 3: ODD ONE OUT -->
+    <section class="exercise-box" id="vocab-ex3">
+        <div class="ex-header">
+            <div>
+                <div class="ex-title">Exercise 3: Find the Odd One Out</div>
+                <div class="ex-subtitle">Select the word that does NOT belong in each group.</div>
+            </div>
+            <span class="ex-tag tag-emerald">Categorizing • 4 Groups</span>
+        </div>
+
+        <div class="odd-grid">
+            <div class="odd-card" data-answer="uncle">
+                <div class="odd-card-top"><span>Group A (Female Family)</span><span>👩🏽</span></div>
+                <div class="odd-options">
+                    <label class="odd-option"><input type="radio" name="odd1" value="aunt"> aunt</label>
+                    <label class="odd-option"><input type="radio" name="odd1" value="niece"> niece</label>
+                    <label class="odd-option"><input type="radio" name="odd1" value="uncle"> uncle</label>
+                    <label class="odd-option"><input type="radio" name="odd1" value="daughter"> daughter</label>
+                </div>
+            </div>
+
+            <div class="odd-card" data-answer="grandfather">
+                <div class="odd-card-top"><span>Group B (Marriage &amp; In-Laws)</span><span>💍</span></div>
+                <div class="odd-options">
+                    <label class="odd-option"><input type="radio" name="odd2" value="wife"> wife</label>
+                    <label class="odd-option"><input type="radio" name="odd2" value="grandfather"> grandfather</label>
+                    <label class="odd-option"><input type="radio" name="odd2" value="father-in-law"> father-in-law</label>
+                    <label class="odd-option"><input type="radio" name="odd2" value="spouse"> spouse</label>
+                </div>
+            </div>
+
+            <div class="odd-card" data-answer="relatives">
+                <div class="odd-card-top"><span>Group C (Step-Family)</span><span>🏡</span></div>
+                <div class="odd-options">
+                    <label class="odd-option"><input type="radio" name="odd3" value="step-mother"> step-mother</label>
+                    <label class="odd-option"><input type="radio" name="odd3" value="step-brother"> step-brother</label>
+                    <label class="odd-option"><input type="radio" name="odd3" value="relatives"> relatives</label>
+                    <label class="odd-option"><input type="radio" name="odd3" value="step-son"> step-son</label>
+                </div>
+            </div>
+
+            <div class="odd-card" data-answer="partner">
+                <div class="odd-card-top"><span>Group D (Plural Words)</span><span>👨🏽👩🏽</span></div>
+                <div class="odd-options">
+                    <label class="odd-option"><input type="radio" name="odd4" value="parents"> parents</label>
+                    <label class="odd-option"><input type="radio" name="odd4" value="grandparents"> grandparents</label>
+                    <label class="odd-option"><input type="radio" name="odd4" value="children"> children</label>
+                    <label class="odd-option"><input type="radio" name="odd4" value="partner"> partner</label>
+                </div>
+            </div>
+        </div>
+        <div class="section-actions">
+            <button class="btn-primary" onclick="checkOddOneOut()">Check Exercise 3</button>
+            <button class="btn-reveal" id="reveal-vocab-ex3" onclick="revealOddOneOut()">Show Wrong Answers</button>
+            <button class="btn-secondary" onclick="resetOddOneOut()">Reset</button>
+            <span class="section-score" id="score-vocab-ex3"></span>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- PART 2: 10 WRITE-ON-CARD RIDDLE CARDS (NO FLIP)           -->
+    <!-- ========================================================= -->
+    <div class="part-banner">
+        <span class="part-icon">✍️</span>
+        <h2>Part 2: Who Am I? (10 Riddle Cards)</h2>
+    </div>
+
+    <section class="exercise-box" id="riddle-section">
+        <div class="ex-header">
+            <div>
+                <div class="ex-title">Exercise 4: Read the Riddle and Write the Answer on the Card</div>
+                <div class="ex-subtitle">Use simple family words (e.g., <em>uncle, grandmother, only child, wife, step-father, nephew, parents, sister-in-law, cousin, grandfather</em>).</div>
+            </div>
+            <span class="ex-tag tag-amber">Write on Card • 10 Cards</span>
+        </div>
+
+        <div class="riddle-grid">
+            <!-- Card 1 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 1</span>
+                    <span class="riddle-emoji">👴🏽</span>
+                </div>
+                <p class="riddle-text">I am your father's father. I am old and I love my grandchildren. Who am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="grandfather|grandpa">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 2</span>
+                    <span class="riddle-emoji">👰🏽‍♀️</span>
+                </div>
+                <p class="riddle-text">I am a woman. I am married to your brother. Who am I to you?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="sister-in-law">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 3</span>
+                    <span class="riddle-emoji">🧍🏽</span>
+                </div>
+                <p class="riddle-text">I have no brothers and no sisters. It is just me, my mother, and my father. What am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="only child|an only child">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 4</span>
+                    <span class="riddle-emoji">👨🏽‍🦱</span>
+                </div>
+                <p class="riddle-text">I am your mother's brother. Your cousins are my children. Who am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="uncle">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 5</span>
+                    <span class="riddle-emoji">👩🏽‍❤️‍👨🏽</span>
+                </div>
+                <p class="riddle-text">We are a mother and a father together. We take care of our children. Who are we?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="parents">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 6</span>
+                    <span class="riddle-emoji">👨🏽‍💼</span>
+                </div>
+                <p class="riddle-text">Your mother married me, so I am her new husband. I am not your biological father. Who am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="step-father|stepfather">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 7</span>
+                    <span class="riddle-emoji">👵🏽</span>
+                </div>
+                <p class="riddle-text">I am your mother's mother. You are my grandchild. Who am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="grandmother|grandma">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 8</span>
+                    <span class="riddle-emoji">👨🏽‍🎓</span>
+                </div>
+                <p class="riddle-text">My father is your brother, or my mother is your sister. I am a boy or man. Who am I to you?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="nephew">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 9</span>
+                    <span class="riddle-emoji">👩🏽</span>
+                </div>
+                <p class="riddle-text">I am a woman, and I am married to a man. I am his...?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="wife">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="riddle-card">
+                <div class="riddle-top">
+                    <span class="riddle-num">Card 10</span>
+                    <span class="riddle-emoji">🧑🏽</span>
+                </div>
+                <p class="riddle-text">My mother is your aunt, and my father is your uncle. We are in the same family. Who am I?</p>
+                <div class="riddle-input-wrap">
+                    <input type="text" placeholder="Write answer..." data-answer="cousin">
+                    <span class="status-icon"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-actions">
+            <button class="btn-primary" onclick="checkSection('riddle-section')">Check 10 Cards</button>
+            <button class="btn-reveal" id="reveal-riddle-section" onclick="revealSection('riddle-section')">Show Wrong Answers</button>
+            <button class="btn-secondary" onclick="resetSection('riddle-section')">Reset</button>
+            <span class="section-score" id="score-riddle-section"></span>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- GLOBAL CONTROLS & TOTAL SCORE                             -->
+    <!-- ========================================================= -->
+    <div class="global-controls">
+        <div class="global-buttons">
+            <button class="btn-primary btn-large" onclick="checkAllHomework()">Check Entire Homework</button>
+            <button class="btn-reveal btn-large" id="reveal-all-btn" onclick="revealAllHomework()">Show All Wrong Answers</button>
+            <button class="btn-secondary btn-large" onclick="resetAllHomework()">Reset Everything</button>
+        </div>
+        <div id="final-score"></div>
+    </div>
+</div>
+
+<script>
+    function normalizeText(str) {
+        return str.trim().toLowerCase().replace(/\s+/g, ' ').replace(/’/g, "'");
+    }
+
+    function checkSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const fields = section.querySelectorAll('input[type="text"], select');
+        let correctCount = 0;
+
+        fields.forEach(field => {
+            const userVal = normalizeText(field.value);
+            const validAnswers = field.dataset.answer.split('|').map(a => normalizeText(a));
+            const icon = field.parentElement.querySelector('.status-icon');
+
+            field.classList.remove('correct', 'incorrect', 'revealed-fix');
+
+            if (userVal !== "" && validAnswers.includes(userVal)) {
+                field.classList.add('correct');
+                if (icon) {
+                    icon.textContent = '✓';
+                    icon.style.color = 'var(--success)';
+                }
+                correctCount++;
+            } else {
+                field.classList.add('incorrect');
+                if (icon) {
+                    icon.textContent = '✗';
+                    icon.style.color = 'var(--error)';
+                }
+            }
+        });
+
+        const scoreEl = document.getElementById('score-' + sectionId);
+        if (scoreEl) {
+            scoreEl.textContent = `Score: ${correctCount} / ${fields.length}`;
+        }
+
+        const revealBtn = document.getElementById('reveal-' + sectionId);
+        if (revealBtn) {
+            revealBtn.style.display = correctCount < fields.length ? 'inline-block' : 'none';
+        }
+
+        return { correct: correctCount, total: fields.length };
+    }
+
+    function resetSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const fields = section.querySelectorAll('input[type="text"], select');
+
+        fields.forEach(field => {
+            field.value = '';
+            field.classList.remove('correct', 'incorrect', 'revealed-fix');
+            const icon = field.parentElement.querySelector('.status-icon');
+            if (icon) icon.textContent = '';
+        });
+
+        const scoreEl = document.getElementById('score-' + sectionId);
+        if (scoreEl) scoreEl.textContent = '';
+
+        const revealBtn = document.getElementById('reveal-' + sectionId);
+        if (revealBtn) revealBtn.style.display = 'none';
+    }
+
+    function revealSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const fields = section.querySelectorAll('input[type="text"], select');
+
+        fields.forEach(field => {
+            if (!field.classList.contains('correct')) {
+                const firstValid = field.dataset.answer.split('|')[0];
+                field.value = firstValid;
+                field.classList.remove('incorrect');
+                field.classList.add('revealed-fix');
+                const icon = field.parentElement.querySelector('.status-icon');
+                if (icon) {
+                    icon.textContent = '💡';
+                }
+            }
+        });
+
+        const revealBtn = document.getElementById('reveal-' + sectionId);
+        if (revealBtn) revealBtn.style.display = 'none';
+    }
+
+    function checkOddOneOut() {
+        const cards = document.querySelectorAll('.odd-card');
+        let correctCount = 0;
+
+        cards.forEach(card => {
+            const expected = card.dataset.answer;
+            const selected = card.querySelector('input[type="radio"]:checked');
+            const options = card.querySelectorAll('.odd-option');
+
+            card.style.borderColor = 'var(--border-color)';
+            card.dataset.isCorrect = 'false';
+            options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'revealed-fix'));
+
+            if (selected) {
+                const parentLabel = selected.parentElement;
+                if (selected.value === expected) {
+                    parentLabel.classList.add('correct');
+                    card.dataset.isCorrect = 'true';
+                    correctCount++;
+                } else {
+                    parentLabel.classList.add('incorrect');
+                }
+            } else {
+                card.style.borderColor = 'var(--error)';
+            }
+        });
+
+        const scoreEl = document.getElementById('score-vocab-ex3');
+        if (scoreEl) {
+            scoreEl.textContent = `Score: ${correctCount} / ${cards.length}`;
+        }
+
+        const revealBtn = document.getElementById('reveal-vocab-ex3');
+        if (revealBtn) {
+            revealBtn.style.display = correctCount < cards.length ? 'inline-block' : 'none';
+        }
+
+        return { correct: correctCount, total: cards.length };
+    }
+
+    function revealOddOneOut() {
+        const cards = document.querySelectorAll('.odd-card');
+        cards.forEach(card => {
+            if (card.dataset.isCorrect !== 'true') {
+                const expected = card.dataset.answer;
+                card.style.borderColor = 'var(--border-color)';
+                const radios = card.querySelectorAll('input[type="radio"]');
+                radios.forEach(r => {
+                    if (r.value === expected) {
+                        r.checked = true;
+                        r.parentElement.classList.add('revealed-fix');
+                    }
+                });
+            }
+        });
+
+        const revealBtn = document.getElementById('reveal-vocab-ex3');
+        if (revealBtn) revealBtn.style.display = 'none';
+    }
+
+    function resetOddOneOut() {
+        const cards = document.querySelectorAll('.odd-card');
+        cards.forEach(card => {
+            card.style.borderColor = 'var(--border-color)';
+            delete card.dataset.isCorrect;
+            const radios = card.querySelectorAll('input[type="radio"]');
+            radios.forEach(r => r.checked = false);
+            const options = card.querySelectorAll('.odd-option');
+            options.forEach(opt => opt.classList.remove('correct', 'incorrect', 'revealed-fix'));
+        });
+
+        const scoreEl = document.getElementById('score-vocab-ex3');
+        if (scoreEl) scoreEl.textContent = '';
+
+        const revealBtn = document.getElementById('reveal-vocab-ex3');
+        if (revealBtn) revealBtn.style.display = 'none';
+    }
+
+    function checkAllHomework() {
+        const sections = ['vocab-ex1', 'vocab-ex2', 'riddle-section'];
+        let totalCorrect = 0;
+        let totalQuestions = 0;
+
+        sections.forEach(id => {
+            const res = checkSection(id);
+            totalCorrect += res.correct;
+            totalQuestions += res.total;
+        });
+
+        const oddRes = checkOddOneOut();
+        totalCorrect += oddRes.correct;
+        totalQuestions += oddRes.total;
+
+        const pct = Math.round((totalCorrect / totalQuestions) * 100);
+        const banner = document.getElementById('final-score');
+        banner.style.display = 'block';
+
+        const revealAllBtn = document.getElementById('reveal-all-btn');
+        if (revealAllBtn) {
+            revealAllBtn.style.display = totalCorrect < totalQuestions ? 'inline-block' : 'none';
+        }
+
+        let feedback = "";
+        if (pct === 100) {
+            feedback = "Excellent work! 100% correct!";
+        } else if (pct >= 75) {
+            feedback = "Great job! Review the red items and try again.";
+        } else {
+            feedback = "Good start! Check the red boxes and fix your answers.";
+        }
+
+        banner.textContent = `Total Score: ${totalCorrect} / ${totalQuestions} (${pct}%) — ${feedback}`;
+    }
+
+    function revealAllHomework() {
+        ['vocab-ex1', 'vocab-ex2', 'riddle-section'].forEach(id => revealSection(id));
+        revealOddOneOut();
+        const revealAllBtn = document.getElementById('reveal-all-btn');
+        if (revealAllBtn) revealAllBtn.style.display = 'none';
+    }
+
+    function resetAllHomework() {
+        const sections = ['vocab-ex1', 'vocab-ex2', 'riddle-section'];
+        sections.forEach(id => resetSection(id));
+        resetOddOneOut();
+        document.getElementById('final-score').style.display = 'none';
+        const revealAllBtn = document.getElementById('reveal-all-btn');
+        if (revealAllBtn) revealAllBtn.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
