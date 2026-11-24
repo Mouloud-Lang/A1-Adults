@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1 English: Premium Adult Reading Practice</title>
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  --surface-paper: #fffdf9; /* Beautiful elegant text card background color */
+  --text-main: #334155;
+  --text-dark: #0f172a;
+  --accent: #047857; /* Luxurious Emerald Green */
+  --accent-light: rgba(4, 120, 87, 0.08);
+  --border-color: #cbd5e1;
+  --card-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  line-height: 2.3;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+header {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 3rem;
+}
+
+@media (max-width: 540px) {
+  .grid-layout { grid-template-columns: 1fr; }
+}
+
+.article-box {
+  background: var(--surface-paper);
+  border: 1px solid #dcd1be;
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.article-box h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #064e3b;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.story-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  text-align: justify;
+}
+
+/* Beautiful 3D word element styling */
+.clickable-word {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0px 6px;
+  margin: 0 1px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-bottom: 3px solid #cbd5e1; /* Gives the 3D look */
+  color: #475569;
+  font-weight: 500;
+  user-select: none;
+  transition: all 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 3D Lift effect on Hover */
+.clickable-word:hover {
+  color: var(--accent);
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  border-bottom: 4px solid #64748b;
+  transform: translateY(-2px); /* Lifts up */
+}
+
+/* 3D Pressed down effect on Active Click */
+.clickable-word:active {
+  transform: translateY(2px);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* Beautiful target rectangle outline overlay triggered via JavaScript focus */
+.clickable-word.active-focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-color: #a7f3d0;
+  border-bottom: 1px solid #059669;
+  transform: translateY(2px);
+  animation: pulse-border 0.45s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes pulse-border {
+  0% { outline-color: rgba(4, 120, 87, 1); box-shadow: 0 0 0 0px rgba(4, 120, 87, 0.4); }
+  100% { outline-color: var(--accent); box-shadow: 0 0 0 8px rgba(4, 120, 87, 0); }
+}
+
+.emoji-spacer {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  pointer-events: none;
+  font-size: 1.45rem;
+  margin: 0 0.2rem;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>A1 English Reading Lesson</h1>
+  <p>An interactive workspace for adult language study. Every word is a 3D clickable button. Click any word to trigger its focus frame and hear its British English pronunciation.</p>
+</header>
+
+<main>
+  <div class="grid-layout">
+    <!-- TEXT 1 -->
+    <div class="article-box">
+      <h2>The Sunday Farmers' Market</h2>
+      <p class="story-text" id="text-block-1">
+        Every Sunday morning, Elena walks to the local farmers' market. She loves fresh fruit for her breakfast and office snacks. Today, she buys sweet red <span class="emoji-spacer">🍓</span>strawberries, <span class="emoji-spacer">🫐</span>blueberries, and a ripe <span class="emoji-spacer">🥭</span>mango. She also chooses two green <span class="emoji-spacer">🥝</span>kiwis, a bunch of purple <span class="emoji-spacer">🍇</span>grapes, and a fresh <span class="emoji-spacer">🍍</span>pineapple. For her afternoon tea, she gets juicy <span class="emoji-spacer">🍑</span>peaches and <span class="emoji-spacer">🟣</span>figs. She puts a yellow <span class="emoji-spacer">🍋</span>lemon in her bag because she likes lemon in her water. Elena never buys sweet cakes because fresh fruit is healthy and delicious!
+      </p>
+    </div>
+
+    <!-- TEXT 2 -->
+    <div class="article-box">
+      <h2>Dinner Guests on Friday Night</h2>
+      <p class="story-text" id="text-block-2">
+        Tonight, Marcus cooks dinner for his colleagues. He prepares a big vegetable soup and roasted vegetables. First, he washes <span class="emoji-spacer">🥔</span>potatoes, <span class="emoji-spacer">🥕</span>carrots, and <span class="emoji-spacer">🍠</span>sweet potatoes. Next, he cuts a white <span class="emoji-spacer">🧅</span>onion, fresh <span class="emoji-spacer">🧄</span>garlic, and green <span class="emoji-spacer">🍃</span>spinach. In a large pan, he cooks <span class="emoji-spacer">🥦</span>broccoli and purple <span class="emoji-spacer">🍆</span>eggplant with olive oil. He also makes a fresh side salad with crisp <span class="emoji-spacer">🥬</span>lettuce, red <span class="emoji-spacer">🍅</span>tomato, <span class="emoji-spacer">🥒</span>cucumber, and green <span class="emoji-spacer">🫑</span>bell pepper. Finally, he adds fresh <span class="emoji-spacer">🫚</span>ginger and a little <span class="emoji-spacer">🌶️</span>chili pepper for warm flavor.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+// British English Audio Pronunciation Core
+function playBritishPronunciation(rawWord) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  
+  const cleanWord = rawWord.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?'"]/g, "").trim();
+  const utterance = new SpeechSynthesisUtterance(cleanWord);
+  utterance.lang = 'en-GB';
+  utterance.rate = 0.92;
+  window.speechSynthesis.speak(utterance);
+}
+
+// Splits structural text content smoothly into custom 3D element blocks
+function transformTextToInteractiveNodes() {
+  const containers = document.querySelectorAll('.story-text');
+  
+  containers.forEach(container => {
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+    let currentNode;
+    const textNodes = [];
+    
+    while(currentNode = walker.nextNode()) {
+      if (currentNode.nodeValue.trim().length > 0) {
+        textNodes.push(currentNode);
+      }
+    }
+    
+    textNodes.forEach(node => {
+      const parent = node.parentNode;
+      const chunks = node.nodeValue.split(/(\s+)/);
+      const outputFragment = document.createDocumentFragment();
+      
+      chunks.forEach(chunk => {
+        if (chunk.trim().length === 0) {
+          outputFragment.appendChild(document.createTextNode(chunk));
+        } else {
+          const wordSpan = document.createElement('span');
+          wordSpan.className = 'clickable-word';
+          wordSpan.textContent = chunk;
+          
+          wordSpan.onclick = (event) => {
+            event.stopPropagation();
+            
+            // Clear any active focus classes globally
+            document.querySelectorAll('.clickable-word').forEach(element => {
+              element.classList.remove('active-focus');
+            });
+            
+            // Focus on the specific button element node
+            wordSpan.classList.add('active-focus');
+            
+            // Execute speech synthesis tracking loop logic
+            playBritishPronunciation(chunk);
+          };
+          
+          outputFragment.appendChild(wordSpan);
+        }
+      });
+      parent.replaceChild(outputFragment, node);
+    });
+  });
+}
+
+// Close active popups when background body clicks are intercepted safely
+document.addEventListener('click', () => {
+  document.querySelectorAll('.clickable-word').forEach(element => {
+    element.classList.remove('active-focus');
+  });
+});
+
+// Fire instantly on window mounting
+window.onload = () => {
+  transformTextToInteractiveNodes();
+};
+</script>
+</body>
+</html>
